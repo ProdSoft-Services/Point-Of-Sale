@@ -24,7 +24,7 @@ Database .sql file is also included in the directory.
 <hr>
 
 # Features 
-- User authorization (admin, cashier)
+- User authorization (admin, cashier) 
 - Stock management (add/delete/modify inventory item)
 - Create own barcode and QR code
 - Customer cash card (provide discount)
