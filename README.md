@@ -15,7 +15,7 @@ Database .sql file is also included in the directory.
 <hr>
  
 # Libraries/Dependencies Used
-- Java FX
+- Java FX 
 - Jaspersoft iReport
 - mySQL JDBC 
 - JFoenix for material design UI
