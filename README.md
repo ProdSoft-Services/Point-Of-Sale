@@ -12,7 +12,7 @@ This project is implemented with Model–view–controller (MVC) software design
 For enduser use, check out the enduserguide.pdf file. 
 Database .sql file is also included in the directory. 
 
-<hr>
+<hr> 
  
 # Libraries/Dependencies Used
 - Java FX 
