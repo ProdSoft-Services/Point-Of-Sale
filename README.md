@@ -10,7 +10,7 @@ In card, we put each card’s QR-code. We included this function because we beli
 This project is implemented with Model–view–controller (MVC) software design pattern.
 
 For enduser use, check out the enduserguide.pdf file. 
-Database .sql file is also included in the directory.
+Database .sql file is also included in the directory. 
 
 <hr>
 
