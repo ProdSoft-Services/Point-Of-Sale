@@ -21,10 +21,9 @@ public class Login extends Application{
 		
 		Scene scene = new Scene(((Parent) root.load()), 1320,700);
 		primaryStage.setScene(scene);
-		primaryStage.setResizable(false);
-		primaryStage.setMaximized(false);
-		primaryStage.setTitle("Tyler's POS System");
-		primaryStage.getIcons().add(new Image("graphic/poslogorect.png"));
+		primaryStage.setResizable(true);
+		primaryStage.setTitle("PRODSOFT-point of sale");
+		primaryStage.getIcons().add(new Image("graphic/logoBG.png"));
 		primaryStage.show();
 		
 	}

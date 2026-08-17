@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #FFF; -fx-font-size: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainCashierController">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #5D7E96; -fx-font-size: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainCashierController">
    <children>
       <AnchorPane layoutY="-10.0" prefHeight="70.0" prefWidth="1300.0" style="-fx-background-color: #21000e;">
          <children>
@@ -28,11 +28,11 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="1300.0">
                <children>
-                  <JFXTextField fx:id="tf_barcode_search" layoutX="18.0" layoutY="3.0" onKeyReleased="#tfTypeSearchAction" prefHeight="48.0" prefWidth="247.0" promptText="Search by barcode" unFocusColor="#252525" />
-                  <JFXButton fx:id="bt_create_card" layoutX="590.0" layoutY="571.0" onAction="#onbtCreateCardClick" style="-fx-background-color: #000; -fx-text-fill: #FFF;" text="Create Card" />
+                  <JFXTextField fx:id="tf_barcode_search" layoutX="18.0" layoutY="3.0" onKeyReleased="#tfTypeSearchAction" prefHeight="48.0" prefWidth="247.0" promptText="Search by barcode" unFocusColor="#252525" style="-fx-text-fill: #2D3E50;" />
+                  <JFXButton fx:id="bt_create_card" layoutX="590.0" layoutY="571.0" onAction="#onbtCreateCardClick" style="-fx-background-color: #E97A32; -fx-text-fill: #FFFFFF;" text="Create Card" />
                   <TableView fx:id="tb_total_item" layoutX="11.0" layoutY="58.0" prefHeight="504.0" prefWidth="758.0" />
-                  <JFXTextField fx:id="tf_name_search" layoutX="312.0" layoutY="3.0" onKeyReleased="#tfNameSearchAction" promptText="Search by name" />
-                  <JFXButton fx:id="bt_redeem" layoutX="38.0" layoutY="571.0" onAction="#onbtRedeemClick" style="-fx-background-color: #000; -fx-text-fill: #FFF;" text="Topup Card" />
+                  <JFXTextField fx:id="tf_name_search" layoutX="312.0" layoutY="3.0" onKeyReleased="#tfNameSearchAction" promptText="Search by name" style="-fx-text-fill: #2D3E50;" />
+                  <JFXButton fx:id="bt_redeem" layoutX="38.0" layoutY="571.0" onAction="#onbtRedeemClick" style="-fx-background-color: #E97A32; -fx-text-fill: #FFFFFF;" text="Topup Card" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="561.0">
@@ -55,14 +55,14 @@
                         </AnchorPane>
                     </content>
                   </ScrollPane>
-                  <JFXButton fx:id="bt_pay" layoutX="384.0" layoutY="500.0" onAction="#onBtPayClick" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: #000; -fx-font-size: 16;" text="Card Pay" textFill="WHITE" />
-                  <Label layoutX="23.0" layoutY="504.0" style="-fx-font-size: 18;" text="Total" />
-                  <JFXTextField fx:id="tf_total" editable="false" layoutX="145.0" layoutY="484.0" prefHeight="48.0" prefWidth="220.0" />
-                  <Label layoutX="20.0" layoutY="550.0" style="-fx-font-size: 18;" text="Pay Amount" />
-                  <JFXTextField fx:id="tf_pay_amount" layoutX="141.0" layoutY="529.0" onAction="#onEnterButtonClick" prefHeight="48.0" prefWidth="220.0" />
-                  <Label layoutX="23.0" layoutY="598.0" style="-fx-font-size: 18;" text="Change" />
-                  <JFXTextField fx:id="tf_change" editable="false" layoutX="141.0" layoutY="572.0" prefHeight="48.0" prefWidth="220.0" />
-                  <JFXButton fx:id="btPrint" layoutX="384.0" layoutY="567.0" onAction="#onbtPrintClick" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: #000; -fx-font-size: 16;" text="Print" textFill="WHITE" />
+                  <JFXButton fx:id="bt_pay" layoutX="384.0" layoutY="500.0" onAction="#onBtPayClick" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: #E97A32; -fx-font-size: 16; -fx-text-fill: #FFFFFF;" text="Card Pay" />
+                  <Label layoutX="23.0" layoutY="504.0" style="-fx-font-size: 18;" text="Total" textFill="#FFFFFF" />
+                  <JFXTextField fx:id="tf_total" editable="false" layoutX="145.0" layoutY="484.0" prefHeight="48.0" prefWidth="220.0" style="-fx-text-fill: #2D3E50;" />
+                  <Label layoutX="20.0" layoutY="550.0" style="-fx-font-size: 18;" text="Pay Amount" textFill="#FFFFFF" />
+                  <JFXTextField fx:id="tf_pay_amount" layoutX="141.0" layoutY="529.0" onAction="#onEnterButtonClick" prefHeight="48.0" prefWidth="220.0" style="-fx-text-fill: #2D3E50;" />
+                  <Label layoutX="23.0" layoutY="598.0" style="-fx-font-size: 18;" text="Change" textFill="#FFFFFF" />
+                  <JFXTextField fx:id="tf_change" editable="false" layoutX="141.0" layoutY="572.0" prefHeight="48.0" prefWidth="220.0" style="-fx-text-fill: #2D3E50;" />
+                  <JFXButton fx:id="btPrint" layoutX="384.0" layoutY="567.0" onAction="#onbtPrintClick" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: #E97A32; -fx-font-size: 16; -fx-text-fill: #FFFFFF;" text="Print" />
                </children></AnchorPane>
         </items>
       </SplitPane>

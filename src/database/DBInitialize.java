@@ -8,17 +8,20 @@ import java.sql.Statement;
 public class DBInitialize {
 
 	public static Statement statement;
+
 	public void DBInitialize() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
-		
-		
-	 // Load the JDBC driver
-	Class.forName("com.mysql.jdbc.Driver").newInstance();
-	System.out.println("Driver loaded");
-	  // Connect to a database
-	 Connection connection = DriverManager.getConnection ("jdbc:mysql://localhost:8889/ucsmpos","root","root");
-	System.out.println("Database connected"); // Create a statement
-	   statement = connection.createStatement();
-	  // Execute a statement
+
+		// Load the JDBC driver
+		Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		System.out.println("Driver loaded");
+
+		// Connect to a database
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ucsmpos?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8", "root", "NewPassword99");
+		System.out.println("Database connected");
+
+		// Create a statement
+		statement = connection.createStatement();
+		// Execute a statement
 	}
-	  
+
 }

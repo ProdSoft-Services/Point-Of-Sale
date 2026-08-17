@@ -52,6 +52,24 @@ public class LoginController{
 	    @FXML
 	    private JFXRadioButton bt_rdo_cashier;
 	    
+	    @FXML // fx:id="rootPane" - root Pane for binding
+	    private javafx.scene.layout.Pane rootPane;
+	    
+	    @FXML // fx:id="overlayPane" - dark overlay for background
+	    private javafx.scene.layout.Pane overlayPane;
+	    
+	    @FXML // fx:id="loginPanel" - login panel for responsive positioning
+	    private javafx.scene.layout.AnchorPane loginPanel;
+	    
+	    @FXML // fx:id="backgroundImage" - background ImageView
+	    private javafx.scene.image.ImageView backgroundImage;
+	    
+	    @FXML // fx:id="mainTitle" - main title label
+	    private javafx.scene.control.Label mainTitle;
+	    
+	    @FXML // fx:id="subTitle" - subtitle label
+	    private javafx.scene.control.Label subTitle;
+	    
 	    //db
 	   // private Statement statement;
 	    private ResultSet resultSet;
@@ -77,11 +95,47 @@ public class LoginController{
 	        assert bt_rdo_admin != null : "fx:id=\"bt_rdo_admin\" was not injected: check your FXML file 'Page_login.fxml'.";
 	        assert usertype != null : "fx:id=\"usertype\" was not injected: check your FXML file 'Page_login.fxml'.";
 	        assert bt_rdo_cashier != null : "fx:id=\"bt_rdo_cashier\" was not injected: check your FXML file 'Page_login.fxml'.";
+	        assert rootPane != null : "fx:id=\"rootPane\" was not injected: check your FXML file 'Page_login.fxml'.";
+	        assert overlayPane != null : "fx:id=\"overlayPane\" was not injected: check your FXML file 'Page_login.fxml'.";
+	        assert loginPanel != null : "fx:id=\"loginPanel\" was not injected: check your FXML file 'Page_login.fxml'.";
+	        assert backgroundImage != null : "fx:id=\"backgroundImage\" was not injected: check your FXML file 'Page_login.fxml'.";
+	        assert mainTitle != null : "fx:id=\"mainTitle\" was not injected: check your FXML file 'Page_login.fxml'.";
+	        assert subTitle != null : "fx:id=\"subTitle\" was not injected: check your FXML file 'Page_login.fxml'.";
 
-	   
+	        // Bind background image size to root pane size for responsive resizing
+	        backgroundImage.fitWidthProperty().bind(rootPane.widthProperty());
+	        backgroundImage.fitHeightProperty().bind(rootPane.heightProperty());
+	        
+	        // Bind overlay size to root pane size
+	        overlayPane.prefWidthProperty().bind(rootPane.widthProperty());
+	        overlayPane.prefHeightProperty().bind(rootPane.heightProperty());
+	        
+	        // Bind login panel position for responsive layout
+	        loginPanel.layoutXProperty().bind(rootPane.widthProperty().subtract(loginPanel.prefWidthProperty()).subtract(60));
+	        loginPanel.layoutYProperty().bind(rootPane.heightProperty().subtract(loginPanel.prefHeightProperty()).divide(2));
+	        
+	        // Add responsive font sizing based on window width
+	        rootPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+	            double width = newVal.doubleValue();
+	            if (width < 768) {
+	                mainTitle.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 36; -fx-font-style: italic;");
+	                subTitle.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 16;");
+	            } else if (width < 1024) {
+	                mainTitle.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 48; -fx-font-style: italic;");
+	                subTitle.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 20;");
+	            } else {
+	                mainTitle.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 60; -fx-font-style: italic;");
+	                subTitle.setStyle("-fx-text-fill: #FFFFFF; -fx-font-size: 27;");
+	            }
+	        });
+
+	        // Style radio buttons with orange toggle color
+	        bt_rdo_admin.setStyle("-fx-text-fill: #FFFFFF; -jfx-toggle-color: #E97A32;");
+	        bt_rdo_cashier.setStyle("-fx-text-fill: #FFFFFF; -jfx-toggle-color: #E97A32;");
+
 	        //database
 	        new DBInitialize().DBInitialize();;
-	        
+        
 	        bt_rdo_cashier.setSelected(true);
 	    }
 	    
@@ -250,7 +304,7 @@ public class LoginController{
 				primaryStage.setTitle("Cashier Panel");
 				//primaryStage.sizeToScene();
 				primaryStage.setResizable(false);
-				primaryStage.getIcons().add(new Image("graphic/poslogorect.png"));
+				primaryStage.getIcons().add(new Image("graphic/logoBG.png"));
 				primaryStage.setMaximized(false);
 				primaryStage.show();
 		    }
@@ -271,7 +325,7 @@ public class LoginController{
 				primaryStage.setTitle("Admin Panel");
 				//primaryStage.sizeToScene();
 				primaryStage.setResizable(false);
-				primaryStage.getIcons().add(new Image("graphic/poslogorect.png"));
+				primaryStage.getIcons().add(new Image("graphic/logoBG.png"));
 				primaryStage.setMaximized(false);
 				primaryStage.show();
 		    }

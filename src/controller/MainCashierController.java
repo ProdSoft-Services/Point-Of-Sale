@@ -605,7 +605,7 @@ public class MainCashierController {
 		sg.setResizable(false);
 		sg.setMaximized(false);
 		sg.setTitle("Redeem Cash Card");
-		sg.getIcons().add(new Image("graphic/poslogorect.png"));
+		sg.getIcons().add(new Image("graphic/logoBG.png"));
 		sg.initModality(Modality.APPLICATION_MODAL);
 		sg.show();
 
@@ -804,7 +804,7 @@ public class MainCashierController {
 		sg.setResizable(true);
 		sg.setMaximized(false);
 		sg.setTitle("Create Card");
-		sg.getIcons().add(new Image("graphic/poslogorect.png"));
+		sg.getIcons().add(new Image("graphic/logoBG.png"));
 		sg.initModality(Modality.APPLICATION_MODAL);
 		sg.show();
 
@@ -857,7 +857,7 @@ public class MainCashierController {
 			sg.setResizable(true);
 			sg.setMaximized(false);
 			sg.setTitle("Card Payment");
-			sg.getIcons().add(new Image("graphic/poslogorect.png"));
+			sg.getIcons().add(new Image("graphic/logoBG.png"));
 			sg.initModality(Modality.APPLICATION_MODAL);
 			sg.show();
 		}

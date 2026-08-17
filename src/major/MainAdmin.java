@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class MainAdmin extends Application{
@@ -21,6 +22,7 @@ public class MainAdmin extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(true);
 		primaryStage.setMaximized(true);
+		primaryStage.getIcons().add(new Image("graphic/logoBG.png"));
 		primaryStage.show();
 		
 	}
