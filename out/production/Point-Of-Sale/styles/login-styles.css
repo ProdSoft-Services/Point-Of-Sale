@@ -1,0 +1,50 @@
+/* Login Page Responsive Styles */
+
+AnchorPane {
+    -fx-padding: 0;
+}
+
+#loginPanel {
+    -fx-padding: 20;
+}
+
+/* Responsive text sizing for different window sizes */
+#mainTitle {
+    -fx-font-size: 60;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: #2D3E50;
+    -fx-wrap-text: true;
+}
+
+#subTitle {
+    -fx-font-size: 27;
+    -fx-text-fill: #5D7E96;
+    -fx-wrap-text: true;
+}
+
+/* Input fields styling */
+.jfx-text-field, .jfx-password-field {
+    -fx-font-size: 14;
+    -fx-padding: 10;
+}
+
+/* Button styling */
+.jfx-button {
+    -fx-padding: 12;
+    -fx-font-size: 16;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+/* Radio button styling */
+.jfx-radio-button {
+    -fx-font-size: 14;
+    -fx-text-fill: #FFFFFF;
+    -jfx-toggle-color: #E97A32;
+}
+
+/* Background image container */
+#backgroundImage {
+    -fx-preserve-ratio: false;
+}

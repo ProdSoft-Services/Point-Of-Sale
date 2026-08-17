@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.effect.GaussianBlur?>
+
+<Pane fx:id="rootPane" prefHeight="700.0" prefWidth="1320.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <!-- Background Image -->
+      <ImageView fx:id="backgroundImage" layoutX="0" layoutY="0" pickOnBounds="false" preserveRatio="false">
+        <image>
+           <Image url="@../graphic/background.png" />
+        </image>
+        <effect>
+           <GaussianBlur radius="8.0" />
+        </effect>
+      </ImageView>
+      
+      <!-- Dark Overlay -->
+      <Pane fx:id="overlayPane" layoutX="0" layoutY="0" style="-fx-background-color: rgba(0, 0, 0, 0.4);" />
+      
+      <!-- Login Panel -->
+      <AnchorPane fx:id="loginPanel" prefHeight="548.0" prefWidth="447.0" style="-fx-background-color: #5D7E96; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);">
+         <children>
+            <JFXTextField id="txt_id" fx:id="tf_id" focusColor="#E97A32" layoutX="84.0" layoutY="215.0" prefHeight="40.0" prefWidth="280.0" promptText="Login ID" style="-fx-text-fill: #FFF;" unFocusColor="#e8e5e5" />
+            <JFXPasswordField fx:id="tf_pass" layoutX="84.0" layoutY="303.0" prefHeight="47.0" prefWidth="286.0" promptText="Password" style="-fx-text-fill: #FFF;" unFocusColor="#e8e8e8" />
+            <JFXButton fx:id="bt_login" defaultButton="true" layoutX="88.0" layoutY="443.0" onAction="#bt_login_action" prefHeight="49.0" prefWidth="278.0" ripplerFill="#F2954D" style="-fx-background-color: #E97A32;" text="Login" textFill="WHITE" />
+            <ImageView fitHeight="162.0" fitWidth="190.0" layoutX="146.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-alignment: center;">
+               <image>
+                  <Image url="@../graphic/logo.png" />
+               </image>
+            </ImageView>
+            <JFXRadioButton fx:id="bt_rdo_admin" layoutX="84.0" layoutY="399.0" text="Admin" textFill="WHITE" style="-fx-text-fill: #FFFFFF; -jfx-toggle-color: #E97A32;">
+               <toggleGroup>
+                  <ToggleGroup fx:id="usertype" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="bt_rdo_cashier" layoutX="266.0" layoutY="399.0" text="Cashier" textFill="WHITE" toggleGroup="$usertype" style="-fx-text-fill: #FFFFFF; -jfx-toggle-color: #E97A32;" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="mainTitle" layoutX="90" layoutY="180" prefHeight="200.0" prefWidth="1100.0" style="-fx-text-fill: #FFFFFF; -fx-font-size: 140; -fx-font-style: italic; -fx-font-weight: bold; -fx-letter-spacing: 2;" text="POINT OF SALE" />
+      <Label fx:id="subTitle" layoutX="95" layoutY="345" prefHeight="50.0" prefWidth="650.0" style="-fx-text-fill: #FFFFFF; -fx-font-size: 34; -fx-font-weight: normal;" text="Made For Your Retail Operation" textAlignment="LEFT" />
+      <Label layoutX="1090" layoutY="669" style="-fx-text-fill: #FFFFFF; -fx-font-size: 12; -fx-opacity: 0.7;" text="Developed by Prodsoft" />
+      <Label layoutX="19" layoutY="669" prefHeight="15.0" prefWidth="300.0" style="-fx-text-fill: #FFFFFF; -fx-font-size: 12; -fx-opacity: 0.7;" text=" Copyright © to ProdSoft And Services Lda" />
+   </children>
+</Pane>
